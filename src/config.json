@@ -1,0 +1,60 @@
+config_data = `[
+    {
+        "name": "  Command",
+        "type": "text",
+        "value": "npm run deploy:dist -- --stage vddev"
+    },
+    {
+        "name": "MONGODB",
+        "type": "select",
+        "options": [{
+                "title": "DM Database",
+                "value": "mongodb://@127.0.0.1:27017/dm_db"
+            },
+            {
+                "title": "Other Database",
+                "value": "mongodb://@127.0.0.1:27020/other_db"
+            }
+        ]
+    },
+    {
+        "name": "test",
+        "type": "seLect",
+        "options": [{
+                "title": "option1",
+                "value": "option1_value"
+            },
+            {
+                "title": "option2",
+                "value": "option2_value"
+            }
+        ]
+    },
+    {
+        "name": "  ACCESS_KEY_ID",
+        "type": "text"
+    },
+    {
+        "name": "ACCESS_KEY_ID1",
+        "type": "text1"
+    },
+    {
+        "type": "text1"
+    },
+    {
+        "name": "  ACCESS_KEY_ID2"
+    },
+    {
+        "name": "TOKEN_VERIFICATION_ENABLED",
+        "type": "   checkbox"
+    },
+    {
+        "name": "SECRET_ACCESS_KEY",
+        "type": "text",
+        "value": "some:s3:bucket:name"
+    },
+    {
+        "name": "password",
+        "type": "password"
+    }
+]`;

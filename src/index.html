@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="js/lib/micro-template.js"></script>
+    <script src="js/index.js"></script>
+    <script src="config.json"></script>
+</head>
+
+<body>
+    <div id="form-container" class="container">
+        <h3>Deploy setup</h3><br>
+        <form>
+            <div id="submit-block" class="form-group row">
+                <div class="offset-sm-2 col-sm-2">
+                    <button type="submit" class="btn btn-primary">Generate</button>
+                </div>
+            </div>
+            <div id="result-area" class="form-group row">
+                <label for="textarea" class="col-sm-2 col-form-label text-right">The result:</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" rows="6" readonly>Result string</textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script id="select_row_tmpl" type="text/template">
+        <div class="form-group row">
+            <label for="select" class="col-sm-4 col-form-label text-right"><%=name%>:</label>
+            <div class="col-sm-5">
+                <select id="<%=id%>" class="form-control ">
+                </select>
+            </div>
+        </div>
+    </script>
+    <script id="option_tmpl" type="text/template">
+        <option value=<%=value%>>
+            <%=title%>
+        </option>
+    </script>
+    <script id="text_row_tmpl" type="text/template">
+        <div class="form-group row ">
+            <label for="text " class="col-sm-4 col-form-label text-right "><%=name%>:</label>
+            <div class="col-sm-6 ">
+                <input id="<%=id%>" type="text" class="form-control" value="<%=value%>">
+            </div>
+        </div>
+    </script>
+    <script id="checkbox_row_tmpl" type="text/template">
+        <div class="form-group row">
+            <label class="col-sm-4 text-right"><%=name%>:</label>
+            <div class="col-sm-2">
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input id="<%=id%>" class="form-check-input" type="checkbox">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="password_row_tmpl" type="text/template">
+        <div class="form-group row">
+            <label for="password" class="col-sm-4 col-form-label text-right">Password:</label>
+            <div class="col-sm-2">
+                <input id="<%=id%>" type="password" class="form-control" placeholder="Password">
+            </div>
+        </div>
+    </script>
+</body>
+
+</html>
